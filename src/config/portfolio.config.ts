@@ -17,11 +17,11 @@ export const themeConfig = ThemeOptions.DEFAULT;
 
 // Site Configuration
 export const siteConfig = {
-    title: "Rohit Yadav | AI/ML Engineer & Full Stack Developer",
-    description: "Rohit Yadav is an AI/ML engineer and full stack developer building intelligent systems, multi-agent pipelines, and scalable data-driven applications.",
+    title: "Rohit Yadav | AI/ML Engineer & Frontend Developer",
+    description: "Rohit Yadav is an AI/ML engineer and frontend developer building intelligent systems, multi-agent pipelines, and scalable data-driven applications.",
     canonical: "https://rohityadav483.github.io/",
     googleSiteVerification: "",
-    keywords: "Rohit Yadav, RohitYadav483, AI Engineer, ML Engineer, Full Stack Developer, Python Developer, FastAPI Developer, Streamlit Developer, TensorFlow, LLM, Multi-Agent AI, Repo2Arch, AI Crypto Advisor, Multi-Agent Debate, VJTI, Electronics Engineering, Siemens Scholar, LeetCode, Portfolio",
+    keywords: "Rohit Yadav, RohitYadav483, AI Engineer, ML Engineer, Frontend Developer, Python Developer, FastAPI Developer, Streamlit Developer, TensorFlow, LLM, Multi-Agent AI, Repo2Arch, AI Crypto Advisor, Multi-Agent Debate, VJTI, Electronics Engineering, Siemens Scholar, LeetCode, Portfolio",
     avatar: "https://github.com/rohityadav483.png",
     siteUrl: "https://rohityadav483.github.io/",
 }
@@ -40,7 +40,7 @@ export const heroConfig = {
     salutation: "Hi👋🏻 My name is",
     firstName: "Rohit.",
     lastName: "",
-    position: "AI/ML Engineer & Full Stack Developer",
+    position: "AI/ML Engineer & Frontend Developer",
     tagLine: {
         prefixText: "I build",
         highlightedText: "Intelligent Systems",
@@ -70,7 +70,7 @@ export const heroConfig = {
 export const aboutConfig = {
     aboutAvatar: Avatar_250,
     description: [
-        "Hey there! 👋🏻 I'm Rohit, an Electronics Engineering student at VJTI Mumbai (CGPA 9.18) who lives at the intersection of AI/ML and full stack engineering.",
+        "Hey there! 👋🏻 I'm Rohit, an Electronics Engineering student at VJTI Mumbai (CGPA 9.18) who lives at the intersection of AI/ML and Frontend engineering.",
         "I build end-to-end intelligent systems — multi-agent LLM pipelines, RAG architectures, LSTM forecasting models, and async FastAPI backends. I care deeply about performance: cutting latency, reducing token costs, and making systems that scale.",
         "Recent work includes a 9-stage async architecture diagram generator, an 8-agent debate AI with FAISS RAG, and a crypto advisory platform combining LSTM + FinBERT + ChromaDB — all deployed and live.",
         "I'm a Siemens Scholar (top 300 from 7,000+ applicants) with 400+ LeetCode problems solved. If you're building something technically ambitious, I'd love to contribute 🚀"
@@ -101,6 +101,11 @@ export const footerConfig = {
             label: "Discord",
             url: "https://discord.com/users/1292392857709314062",
             icon: DiscordIconRaw
+        },
+        {
+            label: "Instagram",
+            url: "https://instagram.com/rohit_yadav483",
+            icon: InstagramIconRaw
         },
 
     ],

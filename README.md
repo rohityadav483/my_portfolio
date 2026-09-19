@@ -1,75 +1,86 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site — React 19 + TypeScript + Vite. Animated with GSAP and Lenis smooth scroll, themeable (multiple color themes + light/dark mode), with a live project-status checker and auto-generated sitemap.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript** + **Vite 6**
+- **React Router 7** — client-side routing
+- **GSAP** + **ScrollTrigger** — scroll animations
+- **Lenis** — smooth scrolling
+- **Tailwind CSS 4**
+- **EmailJS** — contact form, no backend needed
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+cp .env.example .env   # fill in your EmailJS keys
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Site runs at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Environment variables
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The contact form needs an [EmailJS](https://www.emailjs.com/) account. Create a `.env` file in the project root:
 
 ```
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+```
+
+These are compiled into the JS bundle at build time — set them before running `npm run build`, not after.
+
+## Scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start dev server with HMR |
+| `npm run build` | Generate theme CSS, check live project status, generate sitemap, typecheck, then production build to `dist/` |
+| `npm run preview` | Serve the built `dist/` locally, to sanity-check a production build |
+| `npm run build:themes` | Regenerate `src/styles/themes.css` and theme dropdown options from `src/constants/` theme definitions |
+| `npm run lint` | ESLint |
+| `npm run release` | Cut a new version + changelog via commit-and-tag-version |
+
+## Project structure
+
+```
+src/
+  assets/        images, icons, fonts
+  components/    UI/ (header, footer, cards…) and sections/ (hero, contact…)
+  config/        site content — portfolio.config.ts, ProjectsList.ts
+  constants/     theme definitions, skill/tech-stack data
+  context/       ThemeContext (color theme + light/dark mode)
+  hooks/         useLenis, etc.
+  layouts/       MainLayout, ProjectLayout
+  pages/         route-level components
+  styles/        global CSS, generated theme CSS
+  utils/         shared helpers
+scripts/         Node build-time scripts (theme generation, sitemap, project-status check)
+```
+
+### Editing your content
+
+Almost everything you'd want to personalize lives in `src/config/`:
+- **`portfolio.config.ts`** — name, bio, social links, nav, footer, action button
+- **`ProjectsList.ts`** — your projects: name, description, tech stack, images, live/source URLs
+
+Theme colors live in `src/constants/` — edit those and run `npm run build:themes` to regenerate the CSS (this also runs automatically as part of `npm run build`).
+
+## Deployment
+
+A `netlify.toml` is included (build command `npm run build`, publish dir `dist`). To deploy:
+
+1. Push this repo to GitHub.
+2. **Netlify**: "Add new site" → import from Git → it auto-detects `netlify.toml`. Add the three `VITE_EMAILJS_*` env vars in Site settings → Environment, then deploy.
+3. **Vercel**: import the repo, it auto-detects Vite (build `npm run build`, output `dist`). Same env vars in project settings.
+4. **Any static host**: run `npm run build` locally with the env vars set, upload `dist/`.
+
+Since this uses client-side routing (React Router), make sure your host rewrites all paths to `/index.html` (a SPA fallback rule), or deep links like `/projects/some-project` will 404 on refresh.
+
+## Requirements
+
+- Node 22 (see `netlify.toml` / `.nvmrc` if present)
+- npm

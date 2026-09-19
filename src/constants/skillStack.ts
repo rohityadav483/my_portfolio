@@ -62,7 +62,6 @@ import NetlifyIcon from "../assets/skills/netlify.svg";
 import GitIcon from "../assets/skills/git.svg";
 import GithubIcon from "../assets/skills/github.svg";
 import NpmIcon from "../assets/skills/npm.svg";
-import BunIcon from "../assets/skills/bun.svg";
 import ViteIcon from "../assets/skills/vitejs.svg";
 import PostmanIcon from "../assets/skills/postman.svg";
 
@@ -84,15 +83,14 @@ export const WebLanguagesStack: ISkill[] = [
 export const FrontendStack: ISkill[] = [
     { name: "React.js", icon: ReactIcon, link: "https://react.dev/" },
     { name: "Next.js", icon: NextIcon, link: "https://nextjs.org/" },
-    { name: "Astro", icon: AstroIcon, link: "https://astro.build/" },
     { name: "Tailwind CSS", icon: TailwindIcon, link: "https://tailwindcss.com/" },
     { name: "Streamlit", icon: StreamlitIcon, link: "https://streamlit.io/" },
 ];
 
 export const BackendStack: ISkill[] = [
     { name: "FastAPI", icon: FastAPIIcon, link: "https://fastapi.tiangolo.com/" },
-    { name: "Node.js", icon: NodeIcon, link: "https://nodejs.org/" },
-    { name: "Express.js", icon: ExpressIcon, link: "https://expressjs.com/" },
+    // { name: "Node.js", icon: NodeIcon, link: "https://nodejs.org/" },
+    // { name: "Express.js", icon: ExpressIcon, link: "https://expressjs.com/" },
     { name: "REST API", icon: RestApiIcon, link: "https://restfulapi.net/" },
     { name: "Firebase", icon: FirebaseIcon, link: "https://firebase.google.com/" },
     { name: "Auth.js", icon: NextAuthIcon, link: "https://authjs.dev/" },
@@ -144,7 +142,6 @@ export const ToolingStack: ISkill[] = [
     { name: "Git", icon: GitIcon, link: "https://git-scm.com/" },
     { name: "GitHub", icon: GithubIcon, link: "https://github.com/" },
     { name: "npm", icon: NpmIcon, link: "https://www.npmjs.com/" },
-    { name: "Bun", icon: BunIcon, link: "https://bun.sh/" },
     { name: "Vite", icon: ViteIcon, link: "https://vitejs.dev/" },
     { name: "Postman", icon: PostmanIcon, link: "https://www.postman.com/" },
 ];

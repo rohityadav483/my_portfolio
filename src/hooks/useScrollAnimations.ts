@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { transitions } from "@/animations/transitions";
@@ -53,13 +54,19 @@ function initializeVisibleElements() {
  * groups from script.ts and cleans them up on unmount.
  *
  * SPA note (tracker §7.4 warning): Astro had full page loads, so batches
- * were only ever registered once per navigation. In the SPA, whichever
- * component mounts this hook is responsible for triggering
- * ScrollTrigger.refresh() after route changes that add/remove animated
- * elements (wired once the router exists in Section 13) so newly-mounted
- * .Fade_* elements get measured correctly.
+ * were only ever registered once per navigation. In the SPA, batch()
+ * (like the .Fade_Down_Header direct-animation block below) only scans
+ * the DOM once, at the moment it's called — it does not pick up elements
+ * added to the DOM later. ScrollTrigger.refresh() alone does NOT fix this:
+ * it re-measures existing triggers, it doesn't discover new ones. So this
+ * hook depends on `pathname` and fully re-registers on every route change,
+ * tearing down the previous route's triggers/listeners first (via the
+ * effect cleanup) so freshly-mounted .Fade_* elements on the new page —
+ * including a freshly-mounted header — actually get animated in.
  */
 export function useScrollAnimations() {
+    const { pathname } = useLocation();
+
     useEffect(() => {
         const batches = [
             ScrollTrigger.batch(".Fade_Stagger", {
@@ -125,5 +132,5 @@ export function useScrollAnimations() {
             document.removeEventListener("DOMContentLoaded", initializeVisibleElements);
             ScrollTrigger.removeEventListener("refresh", initializeVisibleElements);
         };
-    }, []);
+    }, [pathname]);
 }

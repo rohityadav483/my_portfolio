@@ -1,7 +1,7 @@
 import ProjectLayout from '@/layouts/ProjectLayout';
 import SectionTitle from '@/components/UI/SectionTitle';
 import ProjectCard from '@/components/UI/ProjectCard';
-import { PROJECTS_LIST } from '@/config/ProjectsList';
+import { PROJECTS_LIST } from '@/constants/ProjectsList';
 
 export default function ProjectsPage() {
     return (

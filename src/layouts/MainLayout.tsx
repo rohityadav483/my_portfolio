@@ -3,7 +3,7 @@ import Header from '@/components/UI/Header';
 import MobileHeader from '@/components/UI/MobileHeader';
 import Footer from '@/components/UI/Footer';
 import Cursor from '@/components/UI/Cursor';
-import { headerConfig, footerConfig } from '@/config/portfolio.config';
+import { headerConfig, footerConfig } from '@/constants/portfolio.config';
 
 interface MainLayoutProps {
     children: ReactNode;

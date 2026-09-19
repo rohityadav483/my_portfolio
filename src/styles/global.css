@@ -69,7 +69,10 @@ html.dark {
 
 html {
     font-family: Poppins;
-    font-size: 120%;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 body {

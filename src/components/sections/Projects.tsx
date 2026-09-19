@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import SectionTitle from '@/components/UI/SectionTitle';
 import ProjectCard from '@/components/UI/ProjectCard';
-import { PROJECTS_LIST } from '@/config/ProjectsList';
+import { PROJECTS_LIST } from '@/constants/ProjectsList';
 
 const PROJECT_LIST_LIMIT = 9;
 const SHOW_ALL_PROJECTS = PROJECTS_LIST.filter((p) => !p.isHidden).length > PROJECT_LIST_LIMIT;

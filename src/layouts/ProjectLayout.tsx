@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import ProjectsHeader from '@/components/UI/ProjectsHeader';
 import Footer from '@/components/UI/Footer';
 import Cursor from '@/components/UI/Cursor';
-import { headerConfig, footerConfig, siteConfig } from '@/config/portfolio.config';
+import { headerConfig, footerConfig, siteConfig } from '@/constants/portfolio.config';
 
 export interface ProjectLayoutSEOProps {
     title: string;

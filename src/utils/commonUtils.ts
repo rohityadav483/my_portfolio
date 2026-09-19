@@ -1,4 +1,4 @@
-import type { ITechStack } from "@/config/ProjectsList";
+import type { ITechStack } from "@/constants/ProjectsList";
 import type { ISkill } from "@/constants/skillStack";
 
 // Type to generate keys for the tech stack object

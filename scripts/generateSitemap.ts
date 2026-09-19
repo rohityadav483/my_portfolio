@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { PROJECTS_LIST } from '../src/config/ProjectsList';
-import { siteConfig } from '../src/config/portfolio.config';
+import { PROJECTS_LIST } from '../src/constants/ProjectsList';
+import { siteConfig } from '../src/constants/portfolio.config';
 
 const OUTPUT_PATH = join(process.cwd(), 'public', 'sitemap.xml');
 

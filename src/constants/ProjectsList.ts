@@ -1,6 +1,4 @@
-import LOGOS from "@assets/Logos"
-import SCREENSHOTS from "@assets/Shots"
-import MOCKUPS from "@assets/Mockup"
+import { LOGOS, SCREENSHOTS, MOCKUPS } from "@assets/projects"
 import SKILL_STACK from "@/constants/skillStack";
 import { buildTechStack } from "@/utils/commonUtils";
 

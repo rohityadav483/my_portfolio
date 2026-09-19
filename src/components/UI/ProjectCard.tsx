@@ -1,25 +1,22 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { GithubIcon } from '@/assets/SVGs';
-import type { IProject } from '@/config/ProjectsList';
-import projectStatus from '@/generated/projectStatus.json';
+import type { IProject } from '@/constants/ProjectsList';
 
 interface ProjectCardProps {
     project: IProject;
     className?: string;
 }
 
-type ProjectStatus = 'LIVE' | 'DOWN' | 'BUILDING';
+type ProjectStatus = 'LIVE' | 'BUILDING';
 
 const STATUS_TEXT_CLASS: Record<ProjectStatus, string> = {
     LIVE: 'text-[var(--status-live-fg)]',
-    DOWN: 'text-[var(--status-down-fg)]',
     BUILDING: 'text-[var(--status-warn-fg)]',
 };
 
 const STATUS_DOT_CLASS: Record<ProjectStatus, string> = {
     LIVE: 'bg-[var(--status-live-fg)]',
-    DOWN: 'bg-[var(--status-down-fg)]',
     BUILDING: 'bg-[var(--status-warn-fg)]',
 };
 
@@ -28,16 +25,12 @@ const TECH_ICON_LIMIT = 12;
 export default function ProjectCard({ project, className }: ProjectCardProps) {
     const slug = project.name.replaceAll(' ', '-').toLowerCase();
 
-    // Read the prebuilt status map (scripts/checkProjectStatus.ts); fall back
-    // to DOWN if the slug is missing (e.g. build script hasn't run yet).
-    const status: ProjectStatus =
-        project.status === 'development'
-            ? 'BUILDING'
-            : ((projectStatus as Record<string, ProjectStatus>)[slug] ?? 'DOWN');
+    // No live HEAD-check anymore — deployed projects always show LIVE.
+    const status: ProjectStatus = project.status === 'development' ? 'BUILDING' : 'LIVE';
 
     return (
     <div
-      className={`Project_Stagger Card_Main w-full md:h-[525px] flex flex-col bg-footerAltLite/80 overflow-hidden mt-3 opacity-0 rounded-xl ${className ?? ''}`}
+      className={`Project_Stagger Card_Main w-full md:min-h-[525px] flex flex-col bg-footerAltLite/80 overflow-hidden mt-3 opacity-0 rounded-xl ${className ?? ''}`}
     >
       <Link to={`/projects/${slug}`} className="Projects_Preview relative w-full p-1">
         <img

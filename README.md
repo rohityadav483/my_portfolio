@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site — React 19 + TypeScript + Vite. Animated with GSAP and Lenis smooth scroll, themeable (multiple color themes + light/dark mode), with a live project-status checker and auto-generated sitemap.
+Personal portfolio site — React 19 + TypeScript + Vite. Animated with GSAP and Lenis smooth scroll, themeable (multiple color themes + light/dark mode), with an auto-generated sitemap.
 
 ## Tech stack
 
@@ -38,7 +38,7 @@ These are compiled into the JS bundle at build time — set them before running 
 | Command | What it does |
 |---|---|
 | `npm run dev` | Start dev server with HMR |
-| `npm run build` | Generate theme CSS, check live project status, generate sitemap, typecheck, then production build to `dist/` |
+| `npm run build` | Generate theme CSS, generate sitemap, typecheck, then production build to `dist/` |
 | `npm run preview` | Serve the built `dist/` locally, to sanity-check a production build |
 | `npm run build:themes` | Regenerate `src/styles/themes.css` and theme dropdown options from `src/constants/` theme definitions |
 | `npm run lint` | ESLint |
@@ -50,24 +50,23 @@ These are compiled into the JS bundle at build time — set them before running 
 src/
   assets/        images, icons, fonts
   components/    UI/ (header, footer, cards…) and sections/ (hero, contact…)
-  config/        site content — portfolio.config.ts, ProjectsList.ts
-  constants/     theme definitions, skill/tech-stack data
+  constants/     site content — portfolio.config.ts, ProjectsList.ts, theme + skill/tech-stack data
   context/       ThemeContext (color theme + light/dark mode)
   hooks/         useLenis, etc.
   layouts/       MainLayout, ProjectLayout
   pages/         route-level components
   styles/        global CSS, generated theme CSS
   utils/         shared helpers
-scripts/         Node build-time scripts (theme generation, sitemap, project-status check)
+scripts/         Node build-time scripts (theme generation, sitemap)
 ```
 
 ### Editing your content
 
-Almost everything you'd want to personalize lives in `src/config/`:
+Almost everything you'd want to personalize lives in `src/constants/`:
 - **`portfolio.config.ts`** — name, bio, social links, nav, footer, action button
 - **`ProjectsList.ts`** — your projects: name, description, tech stack, images, live/source URLs
 
-Theme colors live in `src/constants/` — edit those and run `npm run build:themes` to regenerate the CSS (this also runs automatically as part of `npm run build`).
+Theme colors also live in `src/constants/` — edit those and run `npm run build:themes` to regenerate the CSS (this also runs automatically as part of `npm run build`).
 
 ## Deployment
 

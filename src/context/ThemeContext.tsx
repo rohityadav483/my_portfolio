@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
 import { ThemeOptions, type ThemeOptionType } from "@/constants/themeOptions";
-import { themeConfig } from "@config/portfolio.config";
+import { themeConfig } from "@constants/portfolio.config";
 
 export type ThemeMode = "light" | "dark";
 

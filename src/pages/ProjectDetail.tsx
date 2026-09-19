@@ -4,8 +4,8 @@ import { CheckIcon, ClipboardCopyIcon, ExternalLinkIcon } from 'lucide-react';
 import ProjectLayout from '@/layouts/ProjectLayout';
 import SectionTitle from '@/components/UI/SectionTitle';
 import CenterTitle from '@/components/UI/CenterTitle';
-import { PROJECTS_LIST } from '@/config/ProjectsList';
-import { siteConfig, heroConfig } from '@/config/portfolio.config';
+import { PROJECTS_LIST } from '@/constants/ProjectsList';
+import { siteConfig, heroConfig } from '@/constants/portfolio.config';
 
 export default function ProjectDetail() {
     const { projectID } = useParams<{ projectID: string }>();

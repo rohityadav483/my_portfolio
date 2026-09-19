@@ -59,7 +59,7 @@ export default function Hero({ config }: HeroProps) {
                 </div>
             </div>
 
-            <div ref={orbitRef} className="Hero_Orbit relative flex_center w-[340px] lg:w-[500px] aspect-square">
+            <div ref={orbitRef} className="Hero_Orbit relative flex_center w-[340px] md:w-[420px] lg:w-[500px] aspect-square">
                 <div
                     ref={avatarRef}
                     id="avatarImage"

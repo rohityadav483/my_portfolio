@@ -11,9 +11,6 @@
       "@components/*": [
         "./src/components/*"
       ],
-      "@config/*": [
-        "./src/config/*"
-      ],
       "@constants/*": [
         "./src/constants/*"
       ],

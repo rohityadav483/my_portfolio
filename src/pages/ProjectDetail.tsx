@@ -131,8 +131,8 @@ export default function ProjectDetail() {
       <h2 className="Fade_Up font-ubuntu text-[1.5em] pt-4 pb-3 w-full">About the project.</h2>
       <div className="flex justify-center items-center xl:items-start flex-col xl:flex-row gap-4 py-10">
         <img
-          src={project.deviceMockupImage}
-          alt={`${project.name}_Mockup_Image`}
+          src={project.previewImage}
+          alt={`${project.name}_Preview_Image`}
           width={600}
           className="Fade_Up"
           loading="eager"

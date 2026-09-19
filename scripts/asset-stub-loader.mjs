@@ -1,6 +1,6 @@
 // scripts/generateSitemap.ts imports PROJECTS_LIST from
-// src/constants/ProjectsList.ts, which imports logo/screenshot/
-// mockup images and skill icon SVGs. Under Vite those resolve to URL strings;
+// src/constants/ProjectsList.ts, which imports logo/screenshot
+// images and skill icon SVGs. Under Vite those resolve to URL strings;
 // plain Node has no loader for binary asset files and crashes with
 // ERR_UNKNOWN_FILE_EXTENSION. Neither script ever touches image data — they
 // only need name/liveUrl/status — so this loader stubs those imports out as

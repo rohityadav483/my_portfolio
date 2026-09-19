@@ -20,6 +20,7 @@ import TailwindIcon from "../assets/skills/tailwind.svg";
 import StreamlitIcon from "../assets/skills/streamlit.svg";
 
 import FastAPIIcon from "../assets/skills/fastapi.svg";
+import FlaskIcon from "../assets/skills/flask.svg";
 import NodeIcon from "../assets/skills/nodejs.svg";
 import ExpressIcon from "../assets/skills/express.svg";
 import RestApiIcon from "../assets/skills/restapi.svg";
@@ -89,6 +90,7 @@ export const FrontendStack: ISkill[] = [
 
 export const BackendStack: ISkill[] = [
     { name: "FastAPI", icon: FastAPIIcon, link: "https://fastapi.tiangolo.com/" },
+    { name: "Flask", icon: FlaskIcon, link: "https://flask.palletsprojects.com/" },
     // { name: "Node.js", icon: NodeIcon, link: "https://nodejs.org/" },
     // { name: "Express.js", icon: ExpressIcon, link: "https://expressjs.com/" },
     { name: "REST API", icon: RestApiIcon, link: "https://restfulapi.net/" },

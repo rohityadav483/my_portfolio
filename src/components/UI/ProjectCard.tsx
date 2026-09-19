@@ -4,31 +4,31 @@ import { GithubIcon } from '@/assets/SVGs';
 import type { IProject } from '@/constants/ProjectsList';
 
 interface ProjectCardProps {
-    project: IProject;
-    className?: string;
+  project: IProject;
+  className?: string;
 }
 
-type ProjectStatus = 'LIVE' | 'BUILDING';
+type ProjectStatus = 'LIVE' | 'NOT LIVE';
 
 const STATUS_TEXT_CLASS: Record<ProjectStatus, string> = {
-    LIVE: 'text-[var(--status-live-fg)]',
-    BUILDING: 'text-[var(--status-warn-fg)]',
+  LIVE: 'text-[var(--status-live-fg)]',
+  'NOT LIVE': 'text-[var(--status-warn-fg)]',
 };
 
 const STATUS_DOT_CLASS: Record<ProjectStatus, string> = {
-    LIVE: 'bg-[var(--status-live-fg)]',
-    BUILDING: 'bg-[var(--status-warn-fg)]',
+  LIVE: 'bg-[var(--status-live-fg)]',
+  'NOT LIVE': 'bg-[var(--status-warn-fg)]',
 };
 
 const TECH_ICON_LIMIT = 12;
 
 export default function ProjectCard({ project, className }: ProjectCardProps) {
-    const slug = project.name.replaceAll(' ', '-').toLowerCase();
+  const slug = project.name.replaceAll(' ', '-').toLowerCase();
 
-    // No live HEAD-check anymore — deployed projects always show LIVE.
-    const status: ProjectStatus = project.status === 'development' ? 'BUILDING' : 'LIVE';
+  // No live HEAD-check anymore — deployed projects always show LIVE.
+  const status: ProjectStatus = project.status === 'development' ? 'NOT LIVE' : 'LIVE';
 
-    return (
+  return (
     <div
       className={`Project_Stagger Card_Main w-full md:min-h-[525px] flex flex-col bg-footerAltLite/80 overflow-hidden mt-3 opacity-0 rounded-xl ${className ?? ''}`}
     >

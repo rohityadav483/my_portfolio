@@ -6,7 +6,7 @@
   "author": {
     "name": "Rohit Yadav",
     "email": "rohitrajeshyadav3062005@gmail.com",
-    "url": "https://rohityadav483.github.io/"
+    "url": "https://rohityadav483.netlify.app/"
   },
   "scripts": {
     "dev": "npm run build:themes && vite --open --host",

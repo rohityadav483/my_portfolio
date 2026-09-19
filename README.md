@@ -1,5 +1,7 @@
 # Portfolio
 
+**Live site: [rohityadav483.netlify.app](https://rohityadav483.netlify.app/)**
+
 Personal portfolio site — React 19 + TypeScript + Vite. Animated with GSAP and Lenis smooth scroll, themeable (multiple color themes + light/dark mode), with a working contact form, an Internship section, per-project detail pages, and an auto-generated sitemap.
 
 ## Sections
@@ -113,6 +115,8 @@ Add an entry to `INTERNSHIP_LIST` in `InternshipList.ts`. `endDate`, `location`,
 - Set `googleSiteVerification` in `siteConfig` and add the matching tag to `index.html` once you have a Search Console code.
 
 ## Deployment
+
+The live site is hosted on Netlify at <https://rohityadav483.netlify.app/> and redeploys automatically on every push to `main`. If you change the site URL, update `siteConfig` in `portfolio.config.ts`, `index.html` and `public/robots.txt` (the sitemap regenerates on build).
 
 A `netlify.toml` is included (build command `npm run build`, publish dir `dist`). To deploy:
 

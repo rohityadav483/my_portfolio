@@ -19,11 +19,11 @@ export const themeConfig = ThemeOptions.DEFAULT;
 export const siteConfig = {
     title: "Rohit Yadav | AI/ML Engineer & Frontend Developer",
     description: "Rohit Yadav is an AI/ML engineer and frontend developer building intelligent systems, multi-agent pipelines, and scalable data-driven applications.",
-    canonical: "https://rohityadav483.github.io/",
+    canonical: "https://rohityadav483.netlify.app/",
     googleSiteVerification: "",
     keywords: "Rohit Yadav, RohitYadav483, AI Engineer, ML Engineer, AIML Intern, Frontend Developer, Python Developer, FastAPI Developer, Flask Developer, Streamlit Developer, React Developer, TensorFlow, Keras, Scikit-learn, OpenCV, LLM, Groq, Gemini, Multi-Agent AI, Repo2Arch, AI Crypto Advisor, Multi-Agent Debate, SIMIGRA, PrevaMed, TaxMitra AI, Hand Sign Language Translator, ASL Translator, Chronis, VJTI, Electronics Engineering, Siemens Scholar, LeetCode, Portfolio",
     avatar: "https://github.com/rohityadav483.png",
-    siteUrl: "https://rohityadav483.github.io/",
+    siteUrl: "https://rohityadav483.netlify.app/",
 }
 
 // Header Section

@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>https://rohityadav483.github.io/</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/repo2arch</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/repo2arch</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/multi-agent-debate-ai</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/multi-agent-debate-ai</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/ai-crypto-advisor</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/ai-crypto-advisor</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/simigra</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/simigra</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/prevamed</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/prevamed</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/taxmitra-ai</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/taxmitra-ai</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://rohityadav483.github.io/projects/hand-sign-language-translator</loc>
-		<lastmod>2026-09-19T21:55:21.385Z</lastmod>
+		<loc>https://rohityadav483.netlify.app/projects/hand-sign-language-translator</loc>
+		<lastmod>2026-09-19T22:53:30.593Z</lastmod>
 		<priority>0.80</priority>
 	</url>
 </urlset>

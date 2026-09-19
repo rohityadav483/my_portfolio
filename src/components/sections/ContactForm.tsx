@@ -34,7 +34,7 @@ export default function ContactForm() {
             from_name: name,
             from_email: email,
             message,
-            to_email: 'rohitrajeshyadav3062005@gmail.com',
+            to_email: 'rohitrajeshyadav360@gmail.com',
         };
 
         try {

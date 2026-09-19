@@ -21,7 +21,7 @@ export const siteConfig = {
     description: "Rohit Yadav is an AI/ML engineer and frontend developer building intelligent systems, multi-agent pipelines, and scalable data-driven applications.",
     canonical: "https://rohityadav483.github.io/",
     googleSiteVerification: "",
-    keywords: "Rohit Yadav, RohitYadav483, AI Engineer, ML Engineer, Frontend Developer, Python Developer, FastAPI Developer, Streamlit Developer, TensorFlow, LLM, Multi-Agent AI, Repo2Arch, AI Crypto Advisor, Multi-Agent Debate, VJTI, Electronics Engineering, Siemens Scholar, LeetCode, Portfolio",
+    keywords: "Rohit Yadav, RohitYadav483, AI Engineer, ML Engineer, AIML Intern, Frontend Developer, Python Developer, FastAPI Developer, Flask Developer, Streamlit Developer, React Developer, TensorFlow, Keras, Scikit-learn, OpenCV, LLM, Groq, Gemini, Multi-Agent AI, Repo2Arch, AI Crypto Advisor, Multi-Agent Debate, SIMIGRA, PrevaMed, TaxMitra AI, Hand Sign Language Translator, ASL Translator, Chronis, VJTI, Electronics Engineering, Siemens Scholar, LeetCode, Portfolio",
     avatar: "https://github.com/rohityadav483.png",
     siteUrl: "https://rohityadav483.github.io/",
 }

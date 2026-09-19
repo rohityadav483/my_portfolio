@@ -76,7 +76,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              
+              <a
                 href={project.sourceUrl}
                 title={`${project.name} - GitHub`}
                 target="_blank"
@@ -86,7 +86,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
                 <GithubIcon width={20} height={20} aria-hidden="true" />
                 <span className="sr-only">{project.name} - GitHub</span>
               </a>
-              
+              <a
                 href={project.liveUrl}
                 title={`${project.name} Preview`}
                 target="_blank"

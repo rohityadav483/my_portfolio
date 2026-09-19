@@ -50,10 +50,11 @@ export default function Header({ config }: HeaderProps) {
                     <ThemeButton className="Fade_Down_Header" />
 
 
-                    className="Fade_Down_Header Header_ActionBtn relative overflow-hidden rounded-sm flex_center"
-                    href={config.actionButton.url}
-                    target="_blank"
-          >
+                    <a
+                        className="Fade_Down_Header Header_ActionBtn relative overflow-hidden rounded-sm flex_center"
+                        href={config.actionButton.url}
+                        target="_blank"
+                    >
                     <div className="flex_center gap-2">
                         <p>{config.actionButton.text}</p>
                         <Download size={18} />
@@ -61,6 +62,6 @@ export default function Header({ config }: HeaderProps) {
                 </a>
             </div>
         </div>
-    </header >
+    </header>
   );
 }

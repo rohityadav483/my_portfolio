@@ -45,17 +45,17 @@ export default function Hero({ config }: HeroProps) {
 
                 <div className="Fade_Stagger flex justify-center lg:justify-start items-center w-full gap-10 py-4 text-socialIconColor!">
                     {config.links?.map((link) => (
-
-                        key = { link.url }
-              href = { link.url }
-              title = { link.label }
-              aria - label= { link.label }
-              target="_blank"
-                    rel="noreferrer"
-                    className="Fade_Stagger w-[30px] h-[30px] flex items-center justify-center"
-                    dangerouslySetInnerHTML={{ __html: link.icon }}
-            />
-          ))}
+                        <a
+                            key={link.url}
+                            href={link.url}
+                            title={link.label}
+                            aria-label={link.label}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="Fade_Stagger w-[30px] h-[30px] flex items-center justify-center"
+                            dangerouslySetInnerHTML={{ __html: link.icon }}
+                        />
+                    ))}
                 </div>
             </div>
 

@@ -76,12 +76,12 @@ export default function MobileHeader({ config }: MobileHeaderProps) {
                 ))}
 
                 <div className="MobileHeader_Nav flex_center opacity-0 translate-y-4">
-
-                    className="MobileHeader_ActionBtn flex_center"
-                    href={config.actionButton.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-          >
+                    <a
+                        className="MobileHeader_ActionBtn flex_center"
+                        href={config.actionButton.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                     <div className="flex_center gap-4">
                         <p>{config.actionButton.text}</p>
                         <Download />
@@ -89,6 +89,6 @@ export default function MobileHeader({ config }: MobileHeaderProps) {
                 </a>
             </div>
         </nav>
-    </header >
+    </header>
   );
 }

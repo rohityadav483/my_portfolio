@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import CenterTitle from '@/components/UI/CenterTitle';
-import ContactForm from '@/components/ContactForm';
+import ContactForm from './ContactForm';
 import { ContactArt } from '@/assets/SVGs';
 
 const SOCIAL_LINKS = [
@@ -59,19 +59,26 @@ export default function Contact() {
             return;
         }
 
-        const iconSize = images[0].clientWidth;
-        const radius = Math.ceil((center.clientWidth + 2) / 2);
-        const centerWidth = center.offsetWidth;
-        const centerHeight = center.offsetHeight;
+        const positionIcons = () => {
+            const iconSize = images[0].clientWidth;
+            const radius = Math.ceil((center.clientWidth + 2) / 2);
+            const centerWidth = center.offsetWidth;
+            const centerHeight = center.offsetHeight;
 
-        images.forEach((image, index) => {
-            const angle = (index / (images.length - 1)) * Math.PI;
-            const x = Math.cos(-angle) * radius - iconSize / 2;
-            const y = Math.sin(-angle) * radius - iconSize / 2;
+            images.forEach((image, index) => {
+                const angle = (index / (images.length - 1)) * Math.PI;
+                const x = Math.cos(-angle) * radius - iconSize / 2;
+                const y = Math.sin(-angle) * radius - iconSize / 2;
 
-            image.style.left = `${centerWidth / 2 + x}px`;
-            image.style.top = `${centerHeight / 2 + y}px`;
-        });
+                image.style.left = `${centerWidth / 2 + x}px`;
+                image.style.top = `${centerHeight / 2 + y}px`;
+            });
+        };
+
+        positionIcons();
+        // Bug #11 fixed: original only ran once on DOMContentLoaded, icons misplaced on resize.
+        window.addEventListener('resize', positionIcons);
+        return () => window.removeEventListener('resize', positionIcons);
     }, []);
 
     return (
@@ -94,16 +101,16 @@ export default function Contact() {
                         className="Fade_Up w-full max-w-[350px] scale-[0.9] lg:scale-100 lg:max-w-[450px] aspect-square rounded-full border-2 border-dashed border-contactSocialColor mb-8 md:mb-0 md:mt-7"
                     >
                         {SOCIAL_LINKS.map((social, i) => (
-
-                            key = { social.label }
-                ref = { setIconRef(i) }
-                href = { social.href }
-                className = "socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
-                title = { social.label }
-                target = "_blank"
-                aria - label= { social.label }
-                rel="noreferrer"
-              >
+                            <a
+                                key={social.label}
+                                ref={setIconRef(i)}
+                                href={social.href}
+                                className="socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
+                                title={social.label}
+                                target="_blank"
+                                aria-label={social.label}
+                                rel="noreferrer"
+                            >
                         <svg
                             stroke="currentColor"
                             fill="currentColor"

@@ -13,38 +13,7 @@ export default function ContactForm() {
     const nameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
-    const clearTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
-
-    useEffect(() => {
-        const center = circleRef.current;
-        const images = iconRefs.current.filter((el): el is HTMLAnchorElement => el !== null);
-
-        if (!center || !images.length) {
-            console.error('Social circle or icons not found.');
-            return;
-        }
-
-        const positionIcons = () => {
-            const iconSize = images[0].clientWidth;
-            const radius = Math.ceil((center.clientWidth + 2) / 2);
-            const centerWidth = center.offsetWidth;
-            const centerHeight = center.offsetHeight;
-
-            images.forEach((image, index) => {
-                const angle = (index / (images.length - 1)) * Math.PI;
-                const x = Math.cos(-angle) * radius - iconSize / 2;
-                const y = Math.sin(-angle) * radius - iconSize / 2;
-
-                image.style.left = `${centerWidth / 2 + x}px`;
-                image.style.top = `${centerHeight / 2 + y}px`;
-            });
-        };
-
-        positionIcons();
-        // Bug #11 fixed: original only ran once on DOMContentLoaded, icons misplaced on resize.
-        window.addEventListener('resize', positionIcons);
-        return () => window.removeEventListener('resize', positionIcons);
-    }, []);
+    const clearTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
     useEffect(() => {
         return () => {

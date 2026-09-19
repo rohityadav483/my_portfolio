@@ -21,11 +21,7 @@ export interface IProject {
         email: string;
         password: string;
     };
-    technologies: {
-        title: string;
-        description: string;
-        icon: string;
-    }[];
+    technologies: ITechStack[];
     features: {
         title: string;
         description: string;
@@ -40,7 +36,7 @@ export interface IProject {
 
 export interface ITechStack {
     title: string;
-    description: string;
+    description?: string;
     icon: string;
 }
 //#endregion

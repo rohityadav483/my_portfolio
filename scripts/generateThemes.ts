@@ -1,4 +1,5 @@
 import { generateThemeVariables } from "../src/utils/colorUtils.ts";
+import { ThemeOptions, type ThemeOptionType } from "../src/constants/themeOptions.ts";
 import fs from 'fs';
 import path from 'path';
 
@@ -9,16 +10,6 @@ type ColorProperties = {
     secondary: string;
     accent: string;
 };
-
-export const ThemeOptions = {
-    CUSTOM: "custom",
-    DEFAULT: "default",
-    OCEAN: "ocean",
-    FOREST: "forest",
-    SUNSET: "sunset",
-} as const;
-
-export type ThemeOptionType = typeof ThemeOptions[keyof typeof ThemeOptions];
 
 type ColorTheme = {
     [themeName in ThemeOptionType]: {

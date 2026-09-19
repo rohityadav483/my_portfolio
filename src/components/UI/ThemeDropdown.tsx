@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { ThemeDropdownOptions } from "@/constants/themeDropdownOptions";
 import { useTheme } from "@/context/ThemeContext";
-import type { ThemeOptionType } from "@/scripts/generateThemes";
+import type { ThemeOptionType } from "@/constants/themeOptions";
 
 interface ThemeDropdownProps {
     className?: string;

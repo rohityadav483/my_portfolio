@@ -49,10 +49,10 @@ export default function ProjectsHeader({ config }: ProjectsHeaderProps) {
             <ThemeDropdown className="Fade_Down_Header" idPrefix="Desktop" />
             <ThemeButton className="Fade_Down_Header" />
 
-
-            className="Fade_Down_Header Header_ActionBtn relative overflow-hidden rounded-sm flex_center"
-            href={config.actionButton.url}
-            target="_blank"
+            <a
+              className="Fade_Down_Header Header_ActionBtn relative overflow-hidden rounded-sm flex_center"
+              href={config.actionButton.url}
+              target="_blank"
             >
             <div className="flex_center gap-2">
               <p>{config.actionButton.text}</p>
@@ -61,7 +61,7 @@ export default function ProjectsHeader({ config }: ProjectsHeaderProps) {
           </a>
         </div>
       </div>
-    </header >
+    </header>
 
       {/* Mobile */ }
       < header className = "lg:hidden w-full sticky top-0 z-50 headerGradient backdrop-blur-[2px]" >
@@ -113,7 +113,7 @@ export default function ProjectsHeader({ config }: ProjectsHeaderProps) {
           ))}
 
           <div className="MobileHeader_Nav flex_center opacity-0 translate-y-4">
-            
+            <a
               className="MobileHeader_ActionBtn flex_center"
               href={config.actionButton.url}
               target="_blank"
@@ -125,8 +125,8 @@ export default function ProjectsHeader({ config }: ProjectsHeaderProps) {
               </div>
             </a>
           </div>
-        </nav >
-      </header >
+        </nav>
+      </header>
     </>
   );
 }

@@ -1,0 +1,1 @@
+{"root":["./vite.config.ts","./scripts/checkprojectstatus.ts","./scripts/generatesitemap.ts","./scripts/generatethemes.ts"],"version":"5.9.3"}

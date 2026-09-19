@@ -10,7 +10,7 @@ import DiscordIconRaw from "@assets/SVGs/Discord.svg?raw";
 import LeetCodeIconRaw from "@assets/SVGs/LeetCode.svg?raw";
 
 import { LogoIcon } from "@/assets/SVGs";
-import { ThemeOptions } from "../../scripts/generateThemes";
+import { ThemeOptions } from "@/constants/themeOptions";
 
 // Theme Configuration
 export const themeConfig = ThemeOptions.DEFAULT;

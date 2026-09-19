@@ -57,17 +57,17 @@ export default function Footer({ config }: FooterProps) {
 
             <div className="flex justify-center gap-6 items-center">
                 {config.links?.map((link) => (
-
-                    key = { link.url }
-            href = { link.url }
-            title = { link.label }
-            aria - label= { link.label }
-            target="_blank"
-                rel="noreferrer"
-                className="w-[30px] h-[30px] flex items-center justify-center"
-                dangerouslySetInnerHTML={{ __html: link.icon }}
-          />
-        ))}
+                    <a
+                        key={link.url}
+                        href={link.url}
+                        title={link.label}
+                        aria-label={link.label}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-[30px] h-[30px] flex items-center justify-center"
+                        dangerouslySetInnerHTML={{ __html: link.icon }}
+                    />
+                ))}
             </div>
 
             <span>© Copyright {config.copyrightText} RohitYadav</span>

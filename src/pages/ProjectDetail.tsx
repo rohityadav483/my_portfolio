@@ -19,8 +19,8 @@ export default function ProjectDetail() {
     // tracker, kept working anyway.
     const [emailCopied, setEmailCopied] = useState(false);
     const [passCopied, setPassCopied] = useState(false);
-    const emailTimerRef = useRef<ReturnType<typeof setTimeout>>();
-    const passTimerRef = useRef<ReturnType<typeof setTimeout>>();
+    const emailTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+    const passTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
     useEffect(() => {
         return () => {
@@ -93,12 +93,12 @@ export default function ProjectDetail() {
                 </div>
 
                 <div className="flex_center gap-4 text-[1em]">
-
-                    href={project.sourceUrl}
-                    target="_blank"
-                    rel="author"
-                    className="Fade_Stagger flex_center gap-2 LinkBtnGradient px-4 py-2 rounded"
-          >
+                    <a
+                        href={project.sourceUrl}
+                        target="_blank"
+                        rel="author"
+                        className="Fade_Stagger flex_center gap-2 LinkBtnGradient px-4 py-2 rounded"
+                    >
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -115,16 +115,18 @@ export default function ProjectDetail() {
                     <span>Source Code</span>
                 </a>
 
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="Fade_Stagger flex_center gap-2 LinkBtnGradient px-4 py-2 rounded"
-          >
+                <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="Fade_Stagger flex_center gap-2 LinkBtnGradient px-4 py-2 rounded"
+                >
                 <ExternalLinkIcon />
                 <span>Live Demo</span>
             </a>
         </div>
-      </div >
+      </div>
+
 
       <h2 className="Fade_Up font-ubuntu text-[1.5em] pt-4 pb-3 w-full">About the project.</h2>
       <div className="flex justify-center items-center xl:items-start flex-col xl:flex-row gap-4 py-10">

@@ -1,0 +1,57 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "2.0.0",
+  "homepage": "https://github.com/rohityadav483/portfolio",
+  "author": {
+    "name": "Rohit Yadav",
+    "email": "rohitrajeshyadav3062005@gmail.com",
+    "url": "https://rohityadav483.github.io/"
+  },
+  "scripts": {
+    "dev": "npm run build:themes && vite --open --host",
+    "start": "npm run build:themes && vite --host",
+    "build:themes": "tsx scripts/generateThemes.ts",
+    "build": "npm run build:themes && vite-node scripts/checkProjectStatus.ts && vite-node scripts/generateSitemap.ts && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "prepare": "echo skip",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/vite": "^4.2.4",
+    "gsap": "^3.15.0",
+    "lucide-react": "^0.383.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.0.0",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@typescript-eslint/parser": "^8.59.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "husky": "^9.1.7",
+    "semantic-release": "^25.0.3",
+    "tsx": "^4.19.0",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^6.0.0",
+    "vite-node": "^6.0.0",
+    "vite-plugin-svgr": "^4.3.0"
+  }
+}

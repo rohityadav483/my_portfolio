@@ -2,7 +2,7 @@ import { useEffect, useRef, type RefObject } from 'react';
 
 type ScrollSpyMode = { type: 'debounce'; delay: number } | { type: 'throttle'; limit: number };
 
-const SECTION_IDS = ['home', 'about', 'skills', 'projects', 'contact'] as const;
+const SECTION_IDS = ['home', 'about', 'skills', 'internship', 'projects', 'contact'] as const;
 
 function debounce<T extends (...args: unknown[]) => void>(func: T, delay: number) {
     let timeoutId: ReturnType<typeof setTimeout>;

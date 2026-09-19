@@ -13,6 +13,7 @@ interface MobileHeaderProps {
 const NAV_ITEMS = [
     { href: '#about', label: 'About' },
     { href: '#skills', label: 'Skills' },
+    { href: '#internship', label: 'Internship' },
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
 ];

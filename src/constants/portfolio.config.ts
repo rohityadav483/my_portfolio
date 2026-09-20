@@ -70,10 +70,11 @@ export const heroConfig = {
 export const aboutConfig = {
     aboutAvatar: Avatar_250,
     description: [
-        "Hey there! 👋🏻 I'm Rohit, an Electronics Engineering student at VJTI Mumbai (CGPA 9.18) who lives at the intersection of AI/ML and Frontend engineering.",
-        "I build end-to-end intelligent systems — multi-agent LLM pipelines, RAG architectures, LSTM forecasting models, and async FastAPI backends. I care deeply about performance: cutting latency, reducing token costs, and making systems that scale.",
-        "Recent work includes a 9-stage async architecture diagram generator, an 8-agent debate AI with FAISS RAG, and a crypto advisory platform combining LSTM + FinBERT + ChromaDB — all deployed and live.",
-        "I'm a Siemens Scholar (top 300 from 7,000+ applicants) with 400+ LeetCode problems solved. If you're building something technically ambitious, I'd love to contribute 🚀"
+        "I am Rohit, an Electronics Engineering student at VJTI Mumbai (CGPA 9.18), specializing in the intersection of Artificial Intelligence and Frontend Engineering.",
+        "My work centers on architecting end-to-end intelligent systems, blending AI/ML engineering with production-grade frontend development, with a strong emphasis on performance, cost efficiency, and scalability.",
+        "As an AIML Intern at Chronis, I developed an LLM-powered Event Understanding Engine for structured behavioral signal extraction, and a calibration validation pipeline that improved confidence-scoring accuracy by 27% over baseline, benchmarked against 160 human-rated ground-truth pairs.",
+        "My project portfolio includes an AI Crypto Advisor, which integrates LSTM forecasting, FinBERT sentiment analysis, and ChromaDB-based RAG to deliver data-driven investment insights, and a Multi-Agent Debate AI system, which orchestrates eight LLM agents through a structured reasoning pipeline for automated decision support.",
+        "I am a Siemens Scholar, recognized among the top 300 candidates from over 7,000 applicants nationally, and have solved 400+ algorithmic problems on LeetCode. I welcome opportunities to contribute to technically ambitious, high-impact engineering initiatives."
     ],
 }
 

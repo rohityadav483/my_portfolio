@@ -93,42 +93,48 @@ const COMMON_FEATURES = {
 export const PROJECTS_LIST: IProject[] = [
     {
         isHidden: false,
-        name: "Repo2Arch",
-        shortDescription: "Instantly generate architecture diagrams from any GitHub repo using async AST analysis, NetworkX graphs, and Groq LLM synthesis.",
-        description: "Repo2Arch transforms any GitHub repository into a visual architecture diagram in under 5 seconds. It runs a 9-stage async FastAPI pipeline — cloning the repo, performing Python AST + regex fingerprinting across 20+ frameworks, constructing a NetworkX dependency graph, generating Mermaid DSL, and synthesizing summaries via a 3-model Groq fallback chain. Raw source code never enters the LLM context, cutting prompt token usage by ~70%. Results are persisted to Supabase for instant cache hits on repeat queries. Ideal for onboarding, code reviews, and rapid codebase comprehension.",
-        logoImage: LOGOS.Repo2ArchLogo,
-        previewImage: SCREENSHOTS.Repo2ArchShots,
-        theme: "#0f172a",
+        name: "AI Crypto Advisor",
+        shortDescription: "Multi-signal crypto platform combining 3-layer LSTM, FinBERT sentiment, ChromaDB RAG, and Gemini reports — 95% R² and 72% 30-day trend accuracy.",
+        description: "AI Crypto Advisor is a full-stack crypto investment platform that fuses deep learning forecasts, NLP sentiment, and RAG-based context into structured natural language reports. A 3-layer LSTM (128→64→32 units) achieves up to 95% test R² and 72% 30-day trend accuracy across 10 coins. FinBERT scores news sentiment in batches of 16, while ChromaDB RAG retrieves cosine-similar historical context. ThreadPoolExecutor parallelizes LSTM prediction, FinBERT scoring, and GNews ingestion simultaneously across all 10 coins, cutting end-to-end latency ~60%. A risk-weighted allocation engine uses softmax-normalized LSTM signals scaled by volatility exponent per risk tier with automated stop-loss alerts. Final reports are synthesized by Gemini 2.5 Flash and deployed on Hugging Face Spaces via Docker.",
+        logoImage: LOGOS.CryptoAdvisorLogo,
+        previewImage: SCREENSHOTS.CryptoAdvisorShots,
+        theme: "#064e3b",
         status: "completed",
-        liveUrl: "https://repo2arch.streamlit.app/",
-        sourceUrl: "https://github.com/rohityadav483/repo2arch",
+        liveUrl: "https://huggingface.co/spaces/rohityadav483/ai-crypto-advisor",
+        sourceUrl: "https://github.com/rohityadav483/ai_crypto_advisor",
         technologies: [
-            TECH_STACK["FastAPI"],
-            TECH_STACK["Streamlit"],
+            TECH_STACK["TensorFlow"],
             TECH_STACK["Python"],
-            TECH_STACK["NetworkX"],
-            TECH_STACK["Supabase"],
+            TECH_STACK["Streamlit"],
+            TECH_STACK["Docker"],
+            TECH_STACK["ChromaDB"],
+            TECH_STACK["Gemini"],
+            TECH_STACK.HuggingFace,
         ],
         features: [
             {
-                title: "9-Stage Async FastAPI Pipeline",
-                description: "End-to-end async pipeline with background task offloading: clone → AST analysis → graph → Mermaid DSL → LLM synthesis → Supabase persist. Delivers sub-5s response on cached repos."
+                title: "3-Layer LSTM Forecasting",
+                description: "Deep LSTM (128→64→32 units) trained per coin achieves up to 95% test R² and 72% 30-day trend accuracy — reliable price direction forecasting across 10 cryptocurrencies."
             },
             {
-                title: "Python AST + Regex Fingerprinting",
-                description: "Automated framework detection across 20+ frameworks using Python AST traversal and regex patterns — no manual configuration needed. Reduces comprehension time by ~80% on repos with 300+ files."
+                title: "FinBERT Sentiment Analysis",
+                description: "Domain-specific FinBERT model scores financial news sentiment in batches of 16. GNews ingestion provides real-time article feeds per coin for up-to-date market signals."
             },
             {
-                title: "3-Model Groq Fallback Chain",
-                description: "Metadata-only prompting with a 3-model fallback chain eliminates raw source code from LLM context, cutting token usage ~70% while generating summaries, improvement suggestions, and README overviews."
+                title: "ChromaDB RAG Context",
+                description: "Historical analysis and market context stored in ChromaDB vector store. Cosine-similarity retrieval grounds Gemini reports in relevant past patterns."
             },
             {
-                title: "Supabase Caching Layer",
-                description: "Architecture results persisted to Supabase for instant retrieval on repeated queries — no redundant pipeline execution."
+                title: "Parallel Inference Engine",
+                description: "ThreadPoolExecutor parallelizes LSTM prediction, FinBERT scoring, and GNews ingestion across 10 coins simultaneously — cutting end-to-end latency ~60%."
             },
             {
-                title: "Interactive Mermaid Diagrams",
-                description: "Auto-generated Mermaid DSL diagrams rendered interactively, showing module dependencies, entry points, and architectural layers."
+                title: "Risk-Weighted Allocation Engine",
+                description: "Softmax-normalized LSTM upside signals scaled by volatility exponent per risk tier (conservative/moderate/aggressive) with automated stop-loss alert generation."
+            },
+            {
+                title: "Gemini 2.5 Flash Reports",
+                description: "Structured natural language advisory reports synthesized by Gemini 2.5 Flash from LSTM forecasts, FinBERT scores, and RAG context — deployed on Hugging Face Spaces via Docker."
             },
             COMMON_FEATURES.Responsive,
         ],
@@ -183,48 +189,86 @@ export const PROJECTS_LIST: IProject[] = [
     },
     {
         isHidden: false,
-        name: "AI Crypto Advisor",
-        shortDescription: "Multi-signal crypto platform combining 3-layer LSTM, FinBERT sentiment, ChromaDB RAG, and Gemini reports — 95% R² and 72% 30-day trend accuracy.",
-        description: "AI Crypto Advisor is a full-stack crypto investment platform that fuses deep learning forecasts, NLP sentiment, and RAG-based context into structured natural language reports. A 3-layer LSTM (128→64→32 units) achieves up to 95% test R² and 72% 30-day trend accuracy across 10 coins. FinBERT scores news sentiment in batches of 16, while ChromaDB RAG retrieves cosine-similar historical context. ThreadPoolExecutor parallelizes LSTM prediction, FinBERT scoring, and GNews ingestion simultaneously across all 10 coins, cutting end-to-end latency ~60%. A risk-weighted allocation engine uses softmax-normalized LSTM signals scaled by volatility exponent per risk tier with automated stop-loss alerts. Final reports are synthesized by Gemini 2.5 Flash and deployed on Hugging Face Spaces via Docker.",
-        logoImage: LOGOS.CryptoAdvisorLogo,
-        previewImage: SCREENSHOTS.CryptoAdvisorShots,
-        theme: "#064e3b",
+        name: "Repo2Arch",
+        shortDescription: "Instantly generate architecture diagrams from any GitHub repo using async AST analysis, NetworkX graphs, and Groq LLM synthesis.",
+        description: "Repo2Arch transforms any GitHub repository into a visual architecture diagram in under 5 seconds. It runs a 9-stage async FastAPI pipeline — cloning the repo, performing Python AST + regex fingerprinting across 20+ frameworks, constructing a NetworkX dependency graph, generating Mermaid DSL, and synthesizing summaries via a 3-model Groq fallback chain. Raw source code never enters the LLM context, cutting prompt token usage by ~70%. Results are persisted to Supabase for instant cache hits on repeat queries. Ideal for onboarding, code reviews, and rapid codebase comprehension.",
+        logoImage: LOGOS.Repo2ArchLogo,
+        previewImage: SCREENSHOTS.Repo2ArchShots,
+        theme: "#0f172a",
         status: "completed",
-        liveUrl: "https://huggingface.co/spaces/rohityadav483/ai-crypto-advisor",
-        sourceUrl: "https://github.com/rohityadav483/ai_crypto_advisor",
+        liveUrl: "https://repo2arch.streamlit.app/",
+        sourceUrl: "https://github.com/rohityadav483/repo2arch",
         technologies: [
-            TECH_STACK["TensorFlow"],
-            TECH_STACK["Python"],
+            TECH_STACK["FastAPI"],
             TECH_STACK["Streamlit"],
-            TECH_STACK["Docker"],
-            TECH_STACK["ChromaDB"],
-            TECH_STACK["Gemini"],
-            TECH_STACK.HuggingFace,
+            TECH_STACK["Python"],
+            TECH_STACK["NetworkX"],
+            TECH_STACK["Supabase"],
         ],
         features: [
             {
-                title: "3-Layer LSTM Forecasting",
-                description: "Deep LSTM (128→64→32 units) trained per coin achieves up to 95% test R² and 72% 30-day trend accuracy — reliable price direction forecasting across 10 cryptocurrencies."
+                title: "9-Stage Async FastAPI Pipeline",
+                description: "End-to-end async pipeline with background task offloading: clone → AST analysis → graph → Mermaid DSL → LLM synthesis → Supabase persist. Delivers sub-5s response on cached repos."
             },
             {
-                title: "FinBERT Sentiment Analysis",
-                description: "Domain-specific FinBERT model scores financial news sentiment in batches of 16. GNews ingestion provides real-time article feeds per coin for up-to-date market signals."
+                title: "Python AST + Regex Fingerprinting",
+                description: "Automated framework detection across 20+ frameworks using Python AST traversal and regex patterns — no manual configuration needed. Reduces comprehension time by ~80% on repos with 300+ files."
             },
             {
-                title: "ChromaDB RAG Context",
-                description: "Historical analysis and market context stored in ChromaDB vector store. Cosine-similarity retrieval grounds Gemini reports in relevant past patterns."
+                title: "3-Model Groq Fallback Chain",
+                description: "Metadata-only prompting with a 3-model fallback chain eliminates raw source code from LLM context, cutting token usage ~70% while generating summaries, improvement suggestions, and README overviews."
             },
             {
-                title: "Parallel Inference Engine",
-                description: "ThreadPoolExecutor parallelizes LSTM prediction, FinBERT scoring, and GNews ingestion across 10 coins simultaneously — cutting end-to-end latency ~60%."
+                title: "Supabase Caching Layer",
+                description: "Architecture results persisted to Supabase for instant retrieval on repeated queries — no redundant pipeline execution."
             },
             {
-                title: "Risk-Weighted Allocation Engine",
-                description: "Softmax-normalized LSTM upside signals scaled by volatility exponent per risk tier (conservative/moderate/aggressive) with automated stop-loss alert generation."
+                title: "Interactive Mermaid Diagrams",
+                description: "Auto-generated Mermaid DSL diagrams rendered interactively, showing module dependencies, entry points, and architectural layers."
+            },
+            COMMON_FEATURES.Responsive,
+        ],
+        logoSize: 50,
+        versions: [],
+    },
+    {
+        isHidden: false,
+        name: "TaxMitra AI",
+        shortDescription: "ML-assisted Indian income-tax optimizer comparing Old vs New tax regimes, ranking deduction strategies, and explaining every recommendation in plain language.",
+        description: "TaxMitra AI computes a user's full Indian income-tax liability under both the Old and New regimes (FY 2024-25 slabs, age-based senior/super-senior brackets, Section 87A rebate, surcharge + cess) and recommends whichever is cheaper. A trained scikit-learn model (with a rule-based fallback when the model file is unavailable) ranks optimization strategies — maxing Section 80C, health insurance under 80D, NPS 80CCD(1B), home loan interest 24(b) — by projected savings for the user's specific financial profile (18 features including income, age, dependents, HRA, existing deductions, risk appetite). A dedicated explainer module turns every regime recommendation and strategy into a plain-language justification rather than a bare number. Ships as a single unified app: Flask REST API on a background thread (`/api/calculate`, `/api/recommend`, `/api/full-analysis`) alongside a Streamlit dashboard with Plotly visualizations for the interactive UI.",
+        logoImage: LOGOS.TaxMitraLogo,
+        previewImage: SCREENSHOTS.TaxMitraShots,
+        theme: "#1e3a8a",
+        status: "development",
+        liveUrl: "https://github.com/rohityadav483/tax_optimizer",
+        sourceUrl: "https://github.com/rohityadav483/tax_optimizer",
+        technologies: [
+            TECH_STACK["Python"],
+            TECH_STACK["Flask"],
+            TECH_STACK["Streamlit"],
+            TECH_STACK["Scikit‑Learn"],
+            TECH_STACK["Pandas"],
+        ],
+        features: [
+            {
+                title: "Old vs New Regime Comparison",
+                description: "Full slab-based tax computation for both regimes — age-based senior/super-senior slabs, Section 87A rebate, surcharge and cess — with an automatic cheaper-regime recommendation."
             },
             {
-                title: "Gemini 2.5 Flash Reports",
-                description: "Structured natural language advisory reports synthesized by Gemini 2.5 Flash from LSTM forecasts, FinBERT scores, and RAG context — deployed on Hugging Face Spaces via Docker."
+                title: "ML-Ranked Deduction Strategies",
+                description: "Trained model ranks 80C/80D/NPS/home-loan-interest optimizations against an 18-feature financial profile, falling back to rule-based ranking if no model file is present."
+            },
+            {
+                title: "Plain-Language Explanations",
+                description: "Every regime choice and recommended strategy comes with a generated, human-readable explanation of why — not just a number."
+            },
+            {
+                title: "Interactive Streamlit Dashboard",
+                description: "Plotly-powered charts breaking down gross income, deductions, and regime comparison visually."
+            },
+            {
+                title: "Unified Flask + Streamlit Architecture",
+                description: "Single entry point runs a Flask REST API on a background thread alongside the Streamlit UI in the main thread — API and dashboard share the same process."
             },
             COMMON_FEATURES.Responsive,
         ],
@@ -322,50 +366,6 @@ export const PROJECTS_LIST: IProject[] = [
             {
                 title: "Downloadable Reports",
                 description: "Patients can export personalized prediction results as reports."
-            },
-            COMMON_FEATURES.Responsive,
-        ],
-        logoSize: 50,
-        versions: [],
-    },
-    {
-        isHidden: false,
-        name: "TaxMitra AI",
-        shortDescription: "ML-assisted Indian income-tax optimizer comparing Old vs New tax regimes, ranking deduction strategies, and explaining every recommendation in plain language.",
-        description: "TaxMitra AI computes a user's full Indian income-tax liability under both the Old and New regimes (FY 2024-25 slabs, age-based senior/super-senior brackets, Section 87A rebate, surcharge + cess) and recommends whichever is cheaper. A trained scikit-learn model (with a rule-based fallback when the model file is unavailable) ranks optimization strategies — maxing Section 80C, health insurance under 80D, NPS 80CCD(1B), home loan interest 24(b) — by projected savings for the user's specific financial profile (18 features including income, age, dependents, HRA, existing deductions, risk appetite). A dedicated explainer module turns every regime recommendation and strategy into a plain-language justification rather than a bare number. Ships as a single unified app: Flask REST API on a background thread (`/api/calculate`, `/api/recommend`, `/api/full-analysis`) alongside a Streamlit dashboard with Plotly visualizations for the interactive UI.",
-        logoImage: LOGOS.TaxMitraLogo,
-        previewImage: SCREENSHOTS.TaxMitraShots,
-        theme: "#1e3a8a",
-        status: "development",
-        liveUrl: "https://github.com/rohityadav483/tax_optimizer",
-        sourceUrl: "https://github.com/rohityadav483/tax_optimizer",
-        technologies: [
-            TECH_STACK["Python"],
-            TECH_STACK["Flask"],
-            TECH_STACK["Streamlit"],
-            TECH_STACK["Scikit‑Learn"],
-            TECH_STACK["Pandas"],
-        ],
-        features: [
-            {
-                title: "Old vs New Regime Comparison",
-                description: "Full slab-based tax computation for both regimes — age-based senior/super-senior slabs, Section 87A rebate, surcharge and cess — with an automatic cheaper-regime recommendation."
-            },
-            {
-                title: "ML-Ranked Deduction Strategies",
-                description: "Trained model ranks 80C/80D/NPS/home-loan-interest optimizations against an 18-feature financial profile, falling back to rule-based ranking if no model file is present."
-            },
-            {
-                title: "Plain-Language Explanations",
-                description: "Every regime choice and recommended strategy comes with a generated, human-readable explanation of why — not just a number."
-            },
-            {
-                title: "Interactive Streamlit Dashboard",
-                description: "Plotly-powered charts breaking down gross income, deductions, and regime comparison visually."
-            },
-            {
-                title: "Unified Flask + Streamlit Architecture",
-                description: "Single entry point runs a Flask REST API on a background thread alongside the Streamlit UI in the main thread — API and dashboard share the same process."
             },
             COMMON_FEATURES.Responsive,
         ],
